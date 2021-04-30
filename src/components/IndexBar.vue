@@ -3,7 +3,7 @@
     <div v-for="value in data">
       <van-index-anchor :index="value.layerModel"/>
       <van-grid square>
-        <van-grid-item :to="{path: '/carClass',query: {id: obj.id}}" v-for="obj in value.carListEntitys" :key="obj.id" :icon="obj.img" :text="obj.name" />
+        <van-grid-item :to="{path: '/carClass',query: {id: obj.id}}" v-for="obj in value.carListEntitys" :key="obj.id" :icon="require('../assets/'+obj.img)" :text="obj.name" />
       </van-grid>
     </div>
   </van-index-bar>
